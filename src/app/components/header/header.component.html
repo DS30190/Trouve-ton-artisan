@@ -1,12 +1,14 @@
 <header>
   <a routerLink="/" routerLinkActive="active">
-    <img src="assets/Logo.png" alt="Trouve ton artisan">
+    <img src="assets/Logo.png" alt="Au petit village">
   </a>
   <nav>
-    <a routerLink="/artisans" >Bâtiment</a>
-    <a routerLink="/artisans" >Services</a>
-    <a routerLink="/artisans" >Fabrication</a>
-    <a routerLink="/artisans" >Alimentation</a>
+    <a routerLink="/artisans" [queryParams]="{ category: 'Bâtiment' }" class="nav-link">Bâtiment</a>
+    <a routerLink="/artisans" [queryParams]="{ category: 'Services' }" class="nav-link">Services</a>
+    <a routerLink="/artisans" [queryParams]="{ category: 'Fabrication' }" class="nav-link">Fabrication</a>
+    <a routerLink="/artisans" [queryParams]="{ category: 'Alimentation' }" class="nav-link">Alimentation</a>
   </nav>
+ 
 </header>
+
 

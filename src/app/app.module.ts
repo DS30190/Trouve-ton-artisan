@@ -9,6 +9,7 @@ import { ArtisanDetailComponent } from './pages/artisan-detail/artisan-detail.co
 import { ArtisanListComponent } from './pages/artisan-list/artisan-list.component';
 import { ErreurComponent } from './pages/erreur/erreur.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { ErreurComponent } from './pages/erreur/erreur.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     provideClientHydration()
