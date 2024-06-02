@@ -1,10 +1,15 @@
 <header>
-    <p>header works!</p>
-    <nav>
-        <a routerLink="/" >Accueil</a>
-        <a routerLink="/about" >A propos</a>
-        <a routerLink="/contact" c>Contact</a>
-      </nav>
+
+  <a routerLink="/" routerLinkActive="active">
+    <img src="assets/Logo.png" alt="Au petit village">
+  </a>
+  <nav>
+    <a routerLink="/artisans" [queryParams]="{ category: 'Bâtiment' }" class="nav-link">Bâtiment</a>
+    <a routerLink="/artisans" [queryParams]="{ category: 'Services' }" class="nav-link">Services</a>
+    <a routerLink="/artisans" [queryParams]="{ category: 'Fabrication' }" class="nav-link">Fabrication</a>
+    <a routerLink="/artisans" [queryParams]="{ category: 'Alimentation' }" class="nav-link">Alimentation</a>
+  </nav>
+ 
 </header>
 
 

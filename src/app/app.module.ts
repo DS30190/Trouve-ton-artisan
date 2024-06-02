@@ -12,6 +12,7 @@ import { ErreurComponent } from './pages/erreur/erreur.component';
 import { RouterModule } from '@angular/router';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,8 +26,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    RouterModule.forRoot([])
+
   ],
   providers: [
     provideClientHydration()
