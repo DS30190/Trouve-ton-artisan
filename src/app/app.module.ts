@@ -9,7 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ArtisanDetailComponent } from './pages/artisan-detail/artisan-detail.component';
 import { ArtisanListComponent } from './pages/artisan-list/artisan-list.component';
 import { ErreurComponent } from './pages/erreur/erreur.component';
-import { RouterModule } from '@angular/router';
+
 
 
 
@@ -26,7 +26,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule 
   ],
   providers: [
     provideClientHydration()
