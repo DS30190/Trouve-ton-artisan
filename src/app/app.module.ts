@@ -9,6 +9,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ArtisanDetailComponent } from './pages/artisan-detail/artisan-detail.component';
 import { ArtisanListComponent } from './pages/artisan-list/artisan-list.component';
 import { ErreurComponent } from './pages/erreur/erreur.component';
+import { BuildingArtisansComponent } from './pages/building-artisans/building-artisans.component';
+import { ServicesArtisansComponent } from './pages/services-artisans/services-artisans.component';
+import { FabricationArtisansComponent } from './pages/fabrication-artisans/fabrication-artisans.component';
+import { FoodArtisansComponent } from './pages/food-artisans/food-artisans.component';
 
 
 
@@ -21,7 +25,11 @@ import { ErreurComponent } from './pages/erreur/erreur.component';
     HomeComponent,
     ArtisanDetailComponent,
     ArtisanListComponent,
-    ErreurComponent
+    ErreurComponent,
+    BuildingArtisansComponent,
+    ServicesArtisansComponent,
+    FabricationArtisansComponent,
+    FoodArtisansComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<h1>Artisans de l'Alimentation</h1>
+<ul>
+  <li *ngFor="let artisan of artisans">
+    <h2>{{ artisan.name }}</h2>
+    <p>Spécialité: {{ artisan.specialty }}</p>
+    <p>Note: {{ artisan.note }}</p>
+    <p>Location: {{ artisan.location }}</p>
+    <p>À propos: {{ artisan.about }}</p>
+    <p>Email: <a href="mailto:{{ artisan.email }}">{{ artisan.email }}</a></p>
+    <p>Website: <a [href]="artisan.website" target="_blank">{{ artisan.website }}</a></p>
+  </li>
+</ul>
+
