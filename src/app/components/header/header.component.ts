@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { ArtisanService } from '../../artisan.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +9,18 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+ 
+    
+  
+    artisans$!: Observable<any[]>;
 
+    constructor(private artisanService: ArtisanService) {}
+  
+    onSearch(event: Event): void {
+      const target = event.target as HTMLInputElement;
+      this.artisans$ = this.artisanService.searchArtisans(target.value);
+    }
 }
+
 
 

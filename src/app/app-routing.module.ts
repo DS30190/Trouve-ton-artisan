@@ -9,6 +9,7 @@ import { ServicesArtisansComponent } from './pages/services-artisans/services-ar
 import { FabricationArtisansComponent } from './pages/fabrication-artisans/fabrication-artisans.component';
 import { FoodArtisansComponent } from './pages/food-artisans/food-artisans.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'artisans', component: ArtisanListComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'building-artisans', component: BuildingArtisansComponent }, 
   { path: 'services-artisans', component: ServicesArtisansComponent },
   { path: 'fabrication-artisans', component: FabricationArtisansComponent },
-  { path: 'food-artisans', component: FoodArtisansComponent }
+  { path: 'food-artisans', component: FoodArtisansComponent },
+  
 ];
 
 @NgModule({

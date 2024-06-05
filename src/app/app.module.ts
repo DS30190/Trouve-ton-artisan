@@ -13,6 +13,8 @@ import { BuildingArtisansComponent } from './pages/building-artisans/building-ar
 import { ServicesArtisansComponent } from './pages/services-artisans/services-artisans.component';
 import { FabricationArtisansComponent } from './pages/fabrication-artisans/fabrication-artisans.component';
 import { FoodArtisansComponent } from './pages/food-artisans/food-artisans.component';
+import { SearchComponent } from './search/search.component';
+
 
 
 
@@ -29,7 +31,8 @@ import { FoodArtisansComponent } from './pages/food-artisans/food-artisans.compo
     BuildingArtisansComponent,
     ServicesArtisansComponent,
     FabricationArtisansComponent,
-    FoodArtisansComponent
+    FoodArtisansComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
