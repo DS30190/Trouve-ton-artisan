@@ -15,10 +15,10 @@ export class SearchComponent {
 
   constructor(private artisanService: ArtisanService) { }
 
-  onSearch(event: Event): void {
+  onSearch(event: KeyboardEvent): void {
     const target = event.target as HTMLInputElement;
     if (target) {
-      this.query = target.value;
+      this.query = target.value.trim();  // Nettoyer les espaces avant/après
       this.artisans$ = this.artisanService.searchArtisans(this.query);
     }
   }

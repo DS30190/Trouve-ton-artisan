@@ -4,11 +4,16 @@
     <img src="assets/Logo.png" alt="Au petit village">
   </a>
   
-   
+
 <!-- search.component.html -->
 <div class="search-container">
   <img src="assets/rechercher.png" alt="Loupe" class="search-icon">
-  <input type="text" placeholder="Rechercher un artisan" (input)="onSearch($event)">
+  
+  <input type="text" placeholder="Rechercher un artisan" (keydown.enter)="onSearchEnter($event)">
+
+
+
+
   <div *ngIf="artisans$ | async as artisans">
     <ul>
       <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>

@@ -29,7 +29,7 @@ export class ArtisanService {
       map(artisans => artisans.filter(artisan =>
         artisan.name.toLowerCase().includes(query.toLowerCase()) ||
         artisan.specialty.toLowerCase().includes(query.toLowerCase()) ||
-        artisan.city.toLowerCase().includes(query.toLowerCase())
+        artisan.location.toLowerCase().includes(query.toLowerCase())
       ))
     );
   }
