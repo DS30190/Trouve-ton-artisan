@@ -29,4 +29,28 @@ header {
     text-decoration: none;
     color: #000;
   }
-  
+  input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+  }
+    .search-container {
+      position: relative;
+    }
+    
+    .search-container input {
+      padding: 10px 40px 10px 10px; /* Adjust padding to make space for the icon on the right */
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      width: 200px; /* Adjust width as needed */
+    }
+    
+    .search-icon {
+      position: absolute;
+      right: 10px; /* Adjust position inside the input field */
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px; /* Adjust icon size */
+      height: 20px; /* Adjust icon size */
+      pointer-events: none; /* Make the icon non-clickable */
+    }

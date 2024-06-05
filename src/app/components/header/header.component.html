@@ -3,13 +3,30 @@
   <a routerLink="/" routerLinkActive="active">
     <img src="assets/Logo.png" alt="Au petit village">
   </a>
+  
+
+  <div class="search-container">
+    <img src="assets/rechercher.png" alt="Loupe" class="search-icon">
+    
+    <input type="text" placeholder="Rechercher un artisan" (keydown.enter)="onSearchEnter($event)">
+  
+  
+  
+  
+    <div *ngIf="artisans$ | async as artisans">
+      <ul>
+        <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>
+      </ul>
+    </div>
+  </div>
+  
   <nav>
     <a routerLink="/building-artisans" >Bâtiment</a>
     <a routerLink="/services-artisans" >Services</a>
     <a routerLink="/fabrication-artisans" >Fabrication</a>
     <a routerLink="/food-artisans" >Alimentation</a>
   </nav>
- 
+  
 </header>
 
 
