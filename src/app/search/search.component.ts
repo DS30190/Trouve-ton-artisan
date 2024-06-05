@@ -1,4 +1,3 @@
-// search.component.ts
 import { Component } from '@angular/core';
 
 import { ArtisanService } from '../artisan.service';

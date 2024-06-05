@@ -5,22 +5,21 @@
   </a>
   
 
-<!-- search.component.html -->
-<div class="search-container">
-  <img src="assets/rechercher.png" alt="Loupe" class="search-icon">
+  <div class="search-container">
+    <img src="assets/rechercher.png" alt="Loupe" class="search-icon">
+    
+    <input type="text" placeholder="Rechercher un artisan" (keydown.enter)="onSearchEnter($event)">
   
-  <input type="text" placeholder="Rechercher un artisan" (keydown.enter)="onSearchEnter($event)">
-
-
-
-
-  <div *ngIf="artisans$ | async as artisans">
-    <ul>
-      <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>
-    </ul>
+  
+  
+  
+    <div *ngIf="artisans$ | async as artisans">
+      <ul>
+        <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>
+      </ul>
+    </div>
   </div>
-</div>
-
+  
   <nav>
     <a routerLink="/building-artisans" >Bâtiment</a>
     <a routerLink="/services-artisans" >Services</a>
