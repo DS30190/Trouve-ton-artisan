@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
   artisansOfTheMonth: any[] = [];
@@ -14,8 +13,16 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.getData().subscribe(data => {
-      // Assuming your JSON has a key 'artisansOfTheMonth'
-      this.artisansOfTheMonth = data.artisansOfTheMonth.slice(0, 3); // Get the first three artisans
+      console.log('Data received:', data); // Log the entire response
+      if (Array.isArray(data)) {
+        this.artisansOfTheMonth = data.slice(0, 3); // Get the first three artisans
+      } else {
+        console.error('Unexpected data format:', data);
+      }
+    }, error => {
+      console.error('Error fetching data:', error);
     });
   }
 }
+
+
