@@ -9,6 +9,7 @@ html, body {
   }
   h1 {
     color: #00497c;
+    margin: 30px;
   }
   .vertical-center p {
     display: flex;
