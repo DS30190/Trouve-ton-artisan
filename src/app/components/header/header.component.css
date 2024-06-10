@@ -1,56 +1,93 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f8f9fa;
-  }
-  
-  header a {
-    text-decoration: none;
-    color: #000;
-  }
-  
-  header nav {
-    display: flex;
-    gap: 20px;
-  }
-  
-  
-  
-  header img {
-    max-height: 50px; /* Ajustez cette valeur selon vos besoins */
-  }
-  
-  header nav a {
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    text-decoration: none;
-    color: #000;
-  }
-  input[type="text"] {
-    padding: 5px;
-    font-size: 16px;
-  }
-    .search-container {
-      position: relative;
-    }
-    
-    .search-container input {
-      padding: 10px 40px 10px 10px; /* Adjust padding to make space for the icon on the right */
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      outline: none;
-      width: 200px; /* Adjust width as needed */
-    }
-    
-    .search-icon {
-      position: absolute;
-      right: 10px; /* Adjust position inside the input field */
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px; /* Adjust icon size */
-      height: 20px; /* Adjust icon size */
-      pointer-events: none; /* Make the icon non-clickable */
-    }
+  width: 100%;
+  position: relative; /* Pour que le dégradé soit positionné correctement */
+  background-color: #ffffff !important; /* Couleur de fond blanche avec !important pour forcer le style */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+header img {
+  max-height: 80px; /* Ajustez cette valeur selon vos besoins */
+  height: auto; /* Pour s'assurer que l'image conserve son ratio d'aspect */
+}
+
+header nav a {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+}
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative; /* Pour positionner correctement l'icône de recherche */
+  flex-grow: 1;
+  margin-right: 250px;
+  margin-left: 205px; /* Espace entre la barre de recherche et le menu */
+}
+
+.search-container input {
+  padding: 10px 40px 10px 10px; /* Ajuster le padding pour faire de la place pour l'icône à droite */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  width: 100%; /* Ajuste la largeur pour occuper tout l'espace disponible */
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px; /* Ajuster la position à l'intérieur du champ de saisie */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px; /* Ajuster la taille de l'icône */
+  height: 20px; /* Ajuster la taille de l'icône */
+  pointer-events: none; /* Rendre l'icône non cliquable */
+}
+
+.search-results {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 100%;
+  z-index: 1000;
+  margin-top: 5px;
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 5px 10px;
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.gradient-line {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px; /* Hauteur de la ligne de dégradé */
+  background: linear-gradient(to bottom, #e4e4e4, #fff);
+}
+

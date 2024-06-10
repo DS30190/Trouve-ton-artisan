@@ -1,0 +1,13 @@
+.artisan-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  h2 {
+    color: #00497c;
+  }
+  h3 {
+    color: #0074c7;
+  }

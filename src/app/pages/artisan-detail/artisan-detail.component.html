@@ -1,1 +1,18 @@
-<p>artisan-detail works!</p>
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">{{ name }}</h5>
+      <p class="card-text">
+        <strong>Spécialité:</strong> {{ specialty }}<br>
+        <strong>Note:</strong>
+        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+          <i class="fa" [ngClass]="i < rating ? 'fa-star' : 'fa-star-o'"></i>
+        </span><br>
+        <strong>Localisation:</strong> {{ location }}
+      </p>
+      <!-- Placeholder for the map, you can integrate Google Maps or any other map service here -->
+      <div id="map" style="height: 200px; background-color: #e0e0e0;">
+        <!-- Intégration de la carte -->
+      </div>
+    </div>
+  </div>
+  

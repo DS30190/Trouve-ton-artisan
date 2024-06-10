@@ -1,33 +1,41 @@
 <header>
-
-  <a routerLink="/" routerLinkActive="active">
-    <img src="assets/Logo.png" alt="Au petit village">
-  </a>
-  
-
-  <div class="search-container">
-    <img src="assets/rechercher.png" alt="Loupe" class="search-icon">
-    
-    <input type="text" placeholder="Rechercher un artisan" (keydown.enter)="onSearchEnter($event)">
-  
-  
-  
-  
-    <div *ngIf="artisans$ | async as artisans">
-      <ul>
-        <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active">
+        <img src="assets/Logo.png" alt="Au petit village">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex flex-grow-1">
+          <div class="search-container me-auto">
+            <input type="text" class="form-control" placeholder="Rechercher un artisan" (keydown.enter)="onSearchEnter($event)">
+            <img src="assets/rechercher.png" alt="Loupe" class="search-icon">
+            <div *ngIf="artisans$ | async as artisans" class="search-results">
+              <ul>
+                <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/building-artisans">Bâtiment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/services-artisans">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/fabrication-artisans">Fabrication</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/food-artisans">Alimentation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
-  
-  <nav>
-    <a routerLink="/building-artisans" >Bâtiment</a>
-    <a routerLink="/services-artisans" >Services</a>
-    <a routerLink="/fabrication-artisans" >Fabrication</a>
-    <a routerLink="/food-artisans" >Alimentation</a>
   </nav>
-  
+  <div class="gradient-line"></div>
 </header>
-
-
 

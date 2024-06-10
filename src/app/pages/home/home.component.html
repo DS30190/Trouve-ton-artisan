@@ -1,1 +1,37 @@
-<p>home works!</p>
+<div class="home-container">
+    <section class="how-it-works">
+      <h2>Comment trouver mon artisan ?</h2>
+      <ol>
+        <li>
+          <h3>Étape 1</h3>
+          <p>Choisir la catégorie d’artisanat dans le menu.</p>
+        </li>
+        <li>
+          <h3>Étape 2</h3>
+          <p>Choisir un artisan.</p>
+        </li>
+        <li>
+          <h3>Étape 3</h3>
+          <p>Le contacter via le formulaire de contact.</p>
+        </li>
+        <li>
+          <h3>Étape 4</h3>
+          <p>Une réponse sera apportée sous 48h.</p>
+        </li>
+      </ol>
+    </section>
+  
+    <section class="artisans-of-the-month">
+      <h2>Les trois artisans du mois</h2>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4" *ngFor="let artisan of artisansOfTheMonth">
+          <div class="artisan-card">
+            <p>{{ artisan.name }}</p>
+            <p>{{ artisan.specialty }}</p>
+            <p>{{ artisan.location }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  

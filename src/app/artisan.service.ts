@@ -33,4 +33,13 @@ export class ArtisanService {
       ))
     );
   }
+
+  getArtisansOfTheMonth(): Observable<any[]> {
+    const artisansOfTheMonth = [
+      { name: 'Artisan A', rating: 5, specialty: 'Plomberie', location: 'Paris' },
+      { name: 'Artisan B', rating: 4, specialty: 'Électricité', location: 'Lyon' },
+      { name: 'Artisan C', rating: 4, specialty: 'Menuiserie', location: 'Marseille' }
+    ];
+    return of(artisansOfTheMonth);
+  }
 }
