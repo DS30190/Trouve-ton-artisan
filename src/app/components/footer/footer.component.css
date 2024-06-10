@@ -1,0 +1,24 @@
+.footer-menu-container  {
+    border-radius: 15px;
+    background-color: #0074c7;
+    text-decoration: none;
+    color:white;
+  }
+.footer { 
+    margin: 0;
+    width: 100%;
+}
+.footer-menu,
+.footer-contact {
+    margin-left: 20px;
+    color: white;
+  }
+  .footer-menu a {
+    color: #ffffff; /* Définit la couleur des liens en blanc */
+}
+
+.footer-menu a:hover {
+    color: #cccccc; /* Couleur de survol, optionnel, juste pour améliorer l'interaction */
+}
+
+  
