@@ -14,6 +14,10 @@ import { ServicesArtisansComponent } from './pages/services-artisans/services-ar
 import { FabricationArtisansComponent } from './pages/fabrication-artisans/fabrication-artisans.component';
 import { FoodArtisansComponent } from './pages/food-artisans/food-artisans.component';
 import { SearchComponent } from './search/search.component';
+import { LegalNoticesComponent } from './legal-notices/legal-notices.component';
+import { PersonalDataComponent } from './personal-data/personal-data.component';
+import { AccessibilityComponent } from './accessibility/accessibility.component';
+import { CookiesComponent } from './cookies/cookies.component';
 
 
 
@@ -32,7 +36,11 @@ import { SearchComponent } from './search/search.component';
     ServicesArtisansComponent,
     FabricationArtisansComponent,
     FoodArtisansComponent,
-    SearchComponent
+    SearchComponent,
+    LegalNoticesComponent,
+    PersonalDataComponent,
+    AccessibilityComponent,
+    CookiesComponent
   ],
   imports: [
     BrowserModule,
