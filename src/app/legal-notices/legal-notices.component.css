@@ -1,0 +1,18 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .full-height {
+    min-height: 100vh; /* vh est le pourcentage de la hauteur de la fenêtre du navigateur */
+  }
+  h1 {
+    color: #00497c;
+  }
+  .vertical-center p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  

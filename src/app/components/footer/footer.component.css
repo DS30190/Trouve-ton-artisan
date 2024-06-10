@@ -20,5 +20,9 @@
 .footer-menu a:hover {
     color: #cccccc; /* Couleur de survol, optionnel, juste pour améliorer l'interaction */
 }
+.footer-menu a {
+    margin-top: 20px; /* Ajoute 20px de marge en haut de chaque lien */
+    display: block; /* S'assure que la marge top est appliquée correctement */
+}
 
   

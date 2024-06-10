@@ -8,7 +8,10 @@ import { BuildingArtisansComponent } from './pages/building-artisans/building-ar
 import { ServicesArtisansComponent } from './pages/services-artisans/services-artisans.component';
 import { FabricationArtisansComponent } from './pages/fabrication-artisans/fabrication-artisans.component';
 import { FoodArtisansComponent } from './pages/food-artisans/food-artisans.component';
-
+import { LegalNoticesComponent } from './legal-notices/legal-notices.component';
+import { PersonalDataComponent } from './personal-data/personal-data.component';
+import { AccessibilityComponent } from './accessibility/accessibility.component';
+import { CookiesComponent } from './cookies/cookies.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +21,11 @@ const routes: Routes = [
   { path: 'services-artisans', component: ServicesArtisansComponent },
   { path: 'fabrication-artisans', component: FabricationArtisansComponent },
   { path: 'food-artisans', component: FoodArtisansComponent },
-  { path: 'artisan', component: ArtisanDetailComponent}
+  { path: 'artisan', component: ArtisanDetailComponent},
+  { path: 'legal-notices', component: LegalNoticesComponent },
+  { path: 'personal-data', component: PersonalDataComponent },
+  { path: 'accessibility', component: AccessibilityComponent },
+  { path: 'cookies', component: CookiesComponent }
 ];
 
 @NgModule({
