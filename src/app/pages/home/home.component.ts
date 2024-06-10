@@ -12,15 +12,8 @@ export class HomeComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getData().subscribe(data => {
-      console.log('Data received:', data); // Log the entire response
-      if (Array.isArray(data)) {
-        this.artisansOfTheMonth = data.slice(0, 3); // Get the first three artisans
-      } else {
-        console.error('Unexpected data format:', data);
-      }
-    }, error => {
-      console.error('Error fetching data:', error);
+    this.dataService.getArtisansOfTheMonth().subscribe(data => {
+      this.artisansOfTheMonth = data;
     });
   }
 }

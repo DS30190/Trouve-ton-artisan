@@ -22,26 +22,16 @@
     </section>
   
     <section class="artisans-of-the-month">
-        <h2>Les trois artisans du mois</h2>
-            <div class="row">
-                <div  class="col-12 col-md-6 col-lg-4">
-                    <div class="artisan-card">
-                    <p>Artisan 1</p>   
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="artisan-card">
-                     <p>Artisan 2</p>
-                    </div>
-                </div>
-                
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="artisan-card">
-                    <p>Artisan 3</p>
-                    </div>
-                </div>
-            </div>
-    </section> 
- 
+      <h2>Les trois artisans du mois</h2>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4" *ngFor="let artisan of artisansOfTheMonth">
+          <div class="artisan-card">
+            <p>{{ artisan.name }}</p>
+            <p>{{ artisan.specialty }}</p>
+            <p>{{ artisan.location }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   
