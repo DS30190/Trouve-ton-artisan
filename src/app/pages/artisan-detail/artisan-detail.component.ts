@@ -12,3 +12,5 @@ export class ArtisanDetailComponent {
   @Input() location!: string;
 }
 
+
+

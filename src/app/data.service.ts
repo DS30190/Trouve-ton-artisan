@@ -19,5 +19,6 @@ export class DataService {
       map((artisans: any[]) => artisans.filter(artisan => artisan.top === true))
     );
   }
+  
 }
 
