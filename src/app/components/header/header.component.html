@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/" routerLinkActive="active">
-        <img src="assets/Logo.png" alt="Au petit village">
+        <img src="assets/Logo.png" alt="Trouve ton artisan">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,7 @@
         <div class="d-flex flex-grow-1">
           <div class="search-container me-auto">
             <input type="text" class="form-control" placeholder="Rechercher un artisan" (keydown.enter)="onSearchEnter($event)">
-            <img src="assets/rechercher.png" alt="Loupe" class="search-icon">
+            <img src="assets/loupe.svg" alt="Loupe" class="search-icon">
             <div *ngIf="artisans$ | async as artisans" class="search-results">
               <ul>
                 <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>
@@ -36,6 +36,5 @@
       </div>
     </div>
   </nav>
-  <div class="gradient-line"></div>
 </header>
 

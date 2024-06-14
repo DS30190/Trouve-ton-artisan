@@ -7,6 +7,10 @@ header {
   align-items: center;
   padding: 10px 20px;
 }
+.bg-light {
+  background-color: #ffffff !important;
+}
+
 
 header a {
   text-decoration: none;
@@ -14,7 +18,7 @@ header a {
 }
 
 header img {
-  max-height: 80px; /* Ajustez cette valeur selon vos besoins */
+  max-height: 200px; /* Ajustez cette valeur selon vos besoins */
   height: auto; /* Pour s'assurer que l'image conserve son ratio d'aspect */
 }
 
@@ -39,12 +43,13 @@ input[type="text"] {
   flex-grow: 1;
   margin-right: 250px;
   margin-left: 205px; /* Espace entre la barre de recherche et le menu */
+  
 }
 
 .search-container input {
   padding: 10px 40px 10px 10px; /* Ajuster le padding pour faire de la place pour l'icône à droite */
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-color: white #0074c7 #0074c7 white;
   outline: none;
   width: 100%; /* Ajuste la largeur pour occuper tout l'espace disponible */
 }
@@ -57,6 +62,7 @@ input[type="text"] {
   width: 20px; /* Ajuster la taille de l'icône */
   height: 20px; /* Ajuster la taille de l'icône */
   pointer-events: none; /* Rendre l'icône non cliquable */
+  color: #0074c7;
 }
 
 .search-results {
@@ -83,11 +89,5 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.gradient-line {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 5px; /* Hauteur de la ligne de dégradé */
-  background: linear-gradient(to bottom, #e4e4e4, #fff);
-}
+
 
