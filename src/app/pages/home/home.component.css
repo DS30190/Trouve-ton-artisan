@@ -1,13 +1,29 @@
 .artisan-card {
-    border: 1px solid #ccc;
-    padding: 16px;
-    margin: 8px;
+    border: 1px solid #0074c7;
+    padding: 15px;
+    margin: 15px;
     border-radius: 8px;
-    text-align: center;
+    text-align: left;
   }
-  h2 {
+  h2,.name {
     color: #00497c;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
-  h3 {
+  h3, .detail {
     color: #0074c7;
+    margin-left: 15px;
+  }
+  #map {
+    display: flex;
+    justify-content: right;
+    bottom: 10px; /* Distance du bas de la carte */
+    right: 10px; /* Distance du côté droit de la carte */
+    width: 50%; /* Largeur de la carte */
+    height: 150px; /* Hauteur de la carte */
+    background-color: #e0e0e0; /* Couleur de fond de la carte */
+    border-radius: 10px; 
+    margin-left: 15px;
+    margin-bottom: 15px;
   }

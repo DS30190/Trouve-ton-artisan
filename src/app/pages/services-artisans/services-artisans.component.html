@@ -1,13 +1,25 @@
 <h1>Artisans des Services</h1>
-<ul>
-  <li *ngFor="let artisan of artisans">
-    <h2>{{ artisan.name }}</h2>
-    <p>Spécialité: {{ artisan.specialty }}</p>
-    <p>Note: {{ artisan.note }}</p>
-    <p>Location: {{ artisan.location }}</p>
-    <p>À propos: {{ artisan.about }}</p>
-    <p>Email: <a href="mailto:{{ artisan.email }}">{{ artisan.email }}</a></p>
-    <p>Website: <a [href]="artisan.website" target="_blank">{{ artisan.website }}</a></p>
-  </li>
-</ul>
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let artisan of artisans" class="col-12 col-md-6 col-lg-4">
+      <div class="card mb-4">
+        <h5 class="card-title">{{ artisan.name }}</h5>
+        <p class="card-text">
+          <strong>Spécialité:</strong> {{ artisan.specialty }}<br>
+          
+          <strong>Note :  </strong>
+          <span *ngFor="let i of [0, 1, 2, 3, 4]; let index = index">
+            <i class="fa" [ngClass]="index < artisan.note ? 'fa-star' : 'fa-star-o'"></i>
+          </span><br>
+          
+          
+          <strong>Localisation:</strong> {{ artisan.location }}
+        </p>
+        <div id="map">
+          <!-- Intégration de la carte -->
+        </div>
+      </div>
+  </div>
+</div>
+
 
