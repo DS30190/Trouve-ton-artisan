@@ -3,14 +3,16 @@
 }
 .card-text {
     color: #0074c7;
-    margin-left: 15px;
+   
 }
 .card-title {
     margin-top: 15px;
     color: #00497c;
-    margin-left: 15px;
+   
 }
-
+p {
+     margin-left: 15px;
+    }
   
   #map {
     display: flex;
@@ -28,7 +30,3 @@
     color: #00497c;
     margin: 30px;
   }
-  
-  
-  
-  
