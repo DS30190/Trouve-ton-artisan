@@ -15,6 +15,10 @@
     color: #0074c7;
     margin-left: 15px;
   }
+  h4 {
+    color: #00497c;
+    margin-bottom: 15px;
+  }
   #map {
     display: flex;
     justify-content: right;

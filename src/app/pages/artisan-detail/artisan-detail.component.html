@@ -3,7 +3,7 @@
     <p><strong>Spécialité:</strong> {{ artisan.specialty }}</p>
     <p><strong>Note:</strong>
       <span *ngFor="let i of [0, 1, 2, 3, 4]; let index = index">
-        <i class="fa" [ngClass]="index < artisan.note ? 'fa-star' : 'fa-star-o'"></i>
+        <i class="fa" [ngClass]="{'fa-star': index < artisan.note, 'fa-star-o': index >= artisan.note}"></i>
       </span>
     </p>
     <p><strong>Localisation:</strong> {{ artisan.location }}</p>
@@ -13,7 +13,23 @@
     <div id="map" style="height: 200px; background-color: #e0e0e0;">
       <!-- Intégration de la carte -->
     </div>
+    <form (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="contactForm.name">
+      </div>
+      <div class="form-group">
+        <label for="subject">Objet</label>
+        <input type="text" class="form-control" id="subject" name="subject" required [(ngModel)]="contactForm.subject">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="5" required [(ngModel)]="contactForm.message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
   </div>
+  
   
 
 
