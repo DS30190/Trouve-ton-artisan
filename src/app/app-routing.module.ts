@@ -25,7 +25,8 @@ const routes: Routes = [
   { path: 'legal-notices', component: LegalNoticesComponent },
   { path: 'personal-data', component: PersonalDataComponent },
   { path: 'accessibility', component: AccessibilityComponent },
-  { path: 'cookies', component: CookiesComponent }
+  { path: 'cookies', component: CookiesComponent },
+  { path: 'artisan-detail/:id', component: ArtisanDetailComponent}
 ];
 
 @NgModule({

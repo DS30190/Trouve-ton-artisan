@@ -7,17 +7,25 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DataService {
-  private jsonUrl = 'assets/datas.json'; 
+  private jsonUrl = 'assets/datas.json';
 
   constructor(private http: HttpClient) { }
 
   public getData(): Observable<any> {
     return this.http.get(this.jsonUrl);
   }
+
   public getArtisansOfTheMonth(): Observable<any[]> {
     return this.getData().pipe(
-      map((artisans: any[]) => artisans.filter(artisan => artisan.top === true))
+      map((artisans: any[]) => artisans.filter(artisan => artisan.top))
+    );
+  }
+
+  public getArtisanById(id: string): Observable<any> {
+    return this.getData().pipe(
+      map((artisans: any[]) => artisans.find(artisan => artisan.id === id))
     );
   }
 }
+
 

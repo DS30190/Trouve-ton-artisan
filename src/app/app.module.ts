@@ -18,8 +18,8 @@ import { LegalNoticesComponent } from './legal-notices/legal-notices.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
 import { CookiesComponent } from './cookies/cookies.component';
-
-
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 
@@ -46,6 +46,8 @@ import { CookiesComponent } from './cookies/cookies.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    CommonModule,
     HttpClientModule
   ],
   providers: [
