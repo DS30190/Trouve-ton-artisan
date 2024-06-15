@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'personal-data', component: PersonalDataComponent },
   { path: 'accessibility', component: AccessibilityComponent },
   { path: 'cookies', component: CookiesComponent },
-  { path: 'artisan-detail', component: ArtisanDetailComponent}
+  { path: 'artisan-detail/:id', component: ArtisanDetailComponent}
 ];
 
 @NgModule({

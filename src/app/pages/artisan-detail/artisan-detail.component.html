@@ -1,20 +1,24 @@
-<div class="card">
-    <div class="card-body">
-      <h5 class="card-title">{{ name }}</h5>
-      <p class="card-text">
-        <strong>Spécialité:</strong> {{ specialty }}<br>
-        <strong>Note:</strong>
-        <span *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
-          <i class="fa" [ngClass]="i < rating ? 'fa-star' : 'fa-star-o'"></i>
-        </span><br>
-        <strong>Localisation:</strong> {{ location }}
-      </p>
-      <!-- Placeholder for the map, you can integrate Google Maps or any other map service here -->
-      <div id="map" style="height: 200px; background-color: #e0e0e0;">
-        <!-- Intégration de la carte -->
-      </div>
+<div *ngIf="artisan">
+    <h1>{{ artisan.name }}</h1>
+    <p><strong>Spécialité:</strong> {{ artisan.specialty }}</p>
+    <p><strong>Note:</strong>
+      <span *ngFor="let i of [0, 1, 2, 3, 4]; let index = index">
+        <i class="fa" [ngClass]="index < artisan.note ? 'fa-star' : 'fa-star-o'"></i>
+      </span>
+    </p>
+    <p><strong>Localisation:</strong> {{ artisan.location }}</p>
+    <p><strong>À propos:</strong> {{ artisan.about }}</p>
+    <a [href]="artisan.website" target="_blank" *ngIf="artisan.website">Site web</a>
+    <p><strong>Email:</strong> <a [href]="'mailto:' + artisan.email">{{ artisan.email }}</a></p>
+    <div id="map" style="height: 200px; background-color: #e0e0e0;">
+      <!-- Intégration de la carte -->
     </div>
   </div>
+  
+
+
+  
+  
 
   
   
