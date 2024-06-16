@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'personal-data', component: PersonalDataComponent },
   { path: 'accessibility', component: AccessibilityComponent },
   { path: 'cookies', component: CookiesComponent },
-  { path: 'artisan-detail/:id', component: ArtisanDetailComponent}
+  { path: 'artisan-detail/:id', component: ArtisanDetailComponent},
+  { path: '**', redirectTo: '/erreur' }
 ];
 
 @NgModule({
