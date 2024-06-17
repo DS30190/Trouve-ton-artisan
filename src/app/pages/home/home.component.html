@@ -28,10 +28,10 @@
           <div class="col-12 col-md-6 col-lg-4" *ngFor="let artisan of artisansOfTheMonth">
             <div class="artisan-card">
               <a class="nav-link" [routerLink]="['/artisan-detail', artisan.id]"><h4 class="card-title">{{ artisan.name }}</h4></a>
-              <p><strong>Spécialité:</strong> {{ artisan.specialty }}</p>
-              <p><strong>Note: </strong>
-                <span *ngFor="let i of [0, 1, 2, 3, 4]; let index = index">
-                  <i class="fa" [ngClass]="{'fa-star': index < artisan.note, 'fa-star-o': index >= artisan.note}"></i>
+              <p class="detail"><strong>Spécialité:</strong> {{ artisan.specialty }}</p>
+              <p class="detail"><strong>Note: </strong>
+                <span *ngFor="let starClass of getStarClasses(artisan.note)">
+                  <i class="fa" [ngClass]="starClass"></i>
                 </span>
               </p>
               <p class="detail"><strong>Localisation :</strong> {{ artisan.location }}</p>

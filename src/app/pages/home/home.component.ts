@@ -28,6 +28,28 @@ export class HomeComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
   
+  getStarClasses(note: number): string[] {
+    const starClasses = [];
+    const fullStars = Math.floor(note);
+    const remainingStars = note - fullStars;
+    const hasHalfStar = remainingStars >= 0.5;
+    const hasQuarterStar = remainingStars >= 0.25 && remainingStars < 0.75;
+  
+    for (let i = 0; i < 5; i++) {
+      if (i < fullStars) {
+        starClasses.push('fa fa-star');
+      } else if (hasHalfStar && i === fullStars) {
+        starClasses.push('fa fa-star-half-o');
+      } else if (hasQuarterStar && i === fullStars) {
+        starClasses.push('fa fa-star-quarter-o');
+      } else {
+        starClasses.push('fa fa-star-o');
+      }
+    }
+  
+    return starClasses;
+  }
+  
 }
 
 
