@@ -11,7 +11,7 @@
    
     margin-bottom: 15px;
   }
-  h3, .detail {
+  h3, .detail, p {
     color: #0074c7;
     margin-left: 15px;
   }
@@ -20,14 +20,9 @@
     margin-bottom: 15px;
   }
   #map {
-    display: flex;
-    justify-content: right;
-    bottom: 10px; /* Distance du bas de la carte */
-    right: 10px; /* Distance du côté droit de la carte */
-    width: 50%; /* Largeur de la carte */
-    height: 150px; /* Hauteur de la carte */
-    background-color: #e0e0e0; /* Couleur de fond de la carte */
-    border-radius: 10px; 
-    margin-left: 15px;
-    margin-bottom: 15px;
+    
+    
+  }
+  .fa {
+    color: #cd2c2e; /* Couleur rouge pour les étoiles */
   }
