@@ -13,6 +13,7 @@ import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
 import { CookiesComponent } from './cookies/cookies.component';
 import { SearchComponent } from './search/search.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'cookies', component: CookiesComponent },
   { path: 'artisan-detail/:id', component: ArtisanDetailComponent},
   { path: 'search', component: SearchComponent },
+  { path: 'search-results', component: SearchResultComponent },
   { path: '**', redirectTo: '/erreur' }
 ];
 

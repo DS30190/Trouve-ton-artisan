@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>Résultats de la recherche</h2>
+    <div *ngIf="(artisans$ | async)?.length === 0" class="alert alert-info">Aucun artisan trouvé pour cette recherche.</div>
+    <ul class="list-group">
+      <li *ngFor="let artisan of artisans$ | async" class="list-group-item">
+        <!-- Lien vers la page de détail de l'artisan -->
+        <a [routerLink]="['/artisan-detail', artisan.id]">
+          <h5>{{ artisan.name }}</h5>
+          <p>{{ artisan.specialty }} - {{ artisan.location }}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+  

@@ -4,23 +4,21 @@
       <a class="navbar-brand" routerLink="/" routerLinkActive="active">
         <img src="assets/Logo.png" alt="Trouve ton artisan">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="d-flex flex-grow-1">
+
+          <!-- Champ de recherche -->
           <div class="search-container me-auto">
-            <input type="text" class="form-control" placeholder="Rechercher un artisan" [(ngModel)]="query" (keyup.enter)="onSearch(query)">
+            <input type="text" class="form-control" placeholder="Rechercher un artisan" [(ngModel)]="query"
+              (keyup.enter)="onSearchEnter()">
             <img src="assets/loupe.svg" alt="Loupe" class="search-icon">
-            
-            <!-- Section des résultats de recherche -->
-            <div class="search-results" *ngIf="artisans$ | async as artisans">
-              <ul>
-                <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>
-              </ul>
-            </div>
-            
           </div>
+
+          <!-- Liens de navigation -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a class="nav-link" routerLink="/building-artisans">Bâtiment</a>
@@ -40,8 +38,5 @@
     </div>
   </nav>
 </header>
-
-
-
 
 

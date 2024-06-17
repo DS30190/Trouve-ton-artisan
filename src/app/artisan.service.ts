@@ -42,4 +42,5 @@ export class ArtisanService {
     ];
     return of(artisansOfTheMonth);
   }
+
 }

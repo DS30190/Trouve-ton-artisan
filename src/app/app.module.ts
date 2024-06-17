@@ -20,6 +20,7 @@ import { AccessibilityComponent } from './accessibility/accessibility.component'
 import { CookiesComponent } from './cookies/cookies.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 
@@ -41,7 +42,8 @@ import { CommonModule } from '@angular/common';
     LegalNoticesComponent,
     PersonalDataComponent,
     AccessibilityComponent,
-    CookiesComponent
+    CookiesComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

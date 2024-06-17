@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ArtisanService } from '../../artisan.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -9,31 +7,20 @@ import { Observable } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  artisans$: Observable<any[]>;
-  query: string = ''; // Déclaration de la propriété query
+  query: string = ''; // Terme de recherche
 
-  constructor(private artisanService: ArtisanService) {
-    this.artisans$ = new Observable<any[]>(); // Initialisation vide, à adapter selon votre logique
-  }
+  constructor(private router: Router) {}
 
-  // Fonction pour gérer l'événement de recherche
-  onSearch(query: string): void {
-    if (query.trim()) {
-      this.artisans$ = this.artisanService.searchArtisans(query);
-    } else {
-      this.artisans$ = new Observable<any[]>(); // Réinitialisation vide si la recherche est vide
-    }
-  }
-
-  // Fonction pour gérer l'événement lorsque la touche Entrée est enfoncée
+  // Méthode pour gérer la recherche lorsque la touche Entrée est enfoncée
   onSearchEnter(): void {
     if (this.query.trim()) {
-      this.artisans$ = this.artisanService.searchArtisans(this.query);
-    } else {
-      this.artisans$ = new Observable<any[]>(); // Réinitialisation vide si la recherche est vide
+      // Naviguer vers la nouvelle route avec le terme de recherche comme paramètre
+      this.router.navigate(['/search-results'], { queryParams: { query: this.query } });
     }
   }
 }
+
+
 
 
 
