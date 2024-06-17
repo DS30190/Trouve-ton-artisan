@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ArtisanService } from '../../artisan.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,20 +9,35 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  query: string = '';
+  artisans$: Observable<any[]>;
+  query: string = ''; // Déclaration de la propriété query
 
-  constructor(private router: Router) {}
+  constructor(private artisanService: ArtisanService) {
+    this.artisans$ = new Observable<any[]>(); // Initialisation vide, à adapter selon votre logique
+  }
 
-  onSearchEnter(event: KeyboardEvent): void {
-    const target = event.target as HTMLInputElement;
-    if (target) {
-      this.query = target.value.trim();
-      if (this.query) {
-        this.router.navigate(['/search'], { queryParams: { q: this.query } });
-      }
+  // Fonction pour gérer l'événement de recherche
+  onSearch(query: string): void {
+    if (query.trim()) {
+      this.artisans$ = this.artisanService.searchArtisans(query);
+    } else {
+      this.artisans$ = new Observable<any[]>(); // Réinitialisation vide si la recherche est vide
+    }
+  }
+
+  // Fonction pour gérer l'événement lorsque la touche Entrée est enfoncée
+  onSearchEnter(): void {
+    if (this.query.trim()) {
+      this.artisans$ = this.artisanService.searchArtisans(this.query);
+    } else {
+      this.artisans$ = new Observable<any[]>(); // Réinitialisation vide si la recherche est vide
     }
   }
 }
+
+
+
+
 
 
 
