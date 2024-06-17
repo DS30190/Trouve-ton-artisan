@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ArtisanService } from '../artisan.service';
 import { Observable, EMPTY } from 'rxjs';
 
@@ -8,18 +8,23 @@ import { Observable, EMPTY } from 'rxjs';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit {
   artisans$: Observable<any[]> = EMPTY;
   query: string = '';
 
-  constructor(private artisanService: ArtisanService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private artisanService: ArtisanService
+  ) { }
 
-  onSearch(event: KeyboardEvent): void {
-    const target = event.target as HTMLInputElement;
-    if (target) {
-      this.query = target.value.trim();  // Nettoyer les espaces avant/après
-      this.artisans$ = this.artisanService.searchArtisans(this.query);
-    }
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.query = params['q'] || '';
+      if (this.query) {
+        this.artisans$ = this.artisanService.searchArtisans(this.query);
+      }
+    });
   }
 }
+
 

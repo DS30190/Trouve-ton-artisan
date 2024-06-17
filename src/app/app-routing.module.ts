@@ -12,6 +12,7 @@ import { LegalNoticesComponent } from './legal-notices/legal-notices.component';
 import { PersonalDataComponent } from './personal-data/personal-data.component';
 import { AccessibilityComponent } from './accessibility/accessibility.component';
 import { CookiesComponent } from './cookies/cookies.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'accessibility', component: AccessibilityComponent },
   { path: 'cookies', component: CookiesComponent },
   { path: 'artisan-detail/:id', component: ArtisanDetailComponent},
+  { path: 'search', component: SearchComponent },
   { path: '**', redirectTo: '/erreur' }
 ];
 

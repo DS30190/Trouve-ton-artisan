@@ -12,11 +12,6 @@
           <div class="search-container me-auto">
             <input type="text" class="form-control" placeholder="Rechercher un artisan" (keydown.enter)="onSearchEnter($event)">
             <img src="assets/loupe.svg" alt="Loupe" class="search-icon">
-            <div *ngIf="artisans$ | async as artisans" class="search-results">
-              <ul>
-                <li *ngFor="let artisan of artisans">{{ artisan.name }} - {{ artisan.specialty }} - {{ artisan.city }}</li>
-              </ul>
-            </div>
           </div>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -37,4 +32,5 @@
     </div>
   </nav>
 </header>
+
 
