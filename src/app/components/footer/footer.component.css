@@ -24,5 +24,7 @@
     margin-top: 20px; /* Ajoute 20px de marge en haut de chaque lien */
     display: block; /* S'assure que la marge top est appliquée correctement */
 }
-
+.fa-circle {
+    font-size: 50%;
+}
   
