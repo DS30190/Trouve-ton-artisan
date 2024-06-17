@@ -11,8 +11,9 @@
     <p><strong>À propos:</strong> {{ artisan.about }}</p>
     <p><strong>Email: </strong> <a [href]="'mailto:' + artisan.email">{{ artisan.email }}</a></p>
     <a [href]="artisan.website" target="_blank" *ngIf="artisan.website">Site web</a>
-    <div id="map" style="height: 200px; background-color: #e0e0e0;">
-      <!-- Intégration de la carte -->
+    <div id="map">
+      <iframe [src]="sanitizeMapUrl(artisan.coordinates.latitude, artisan.coordinates.longitude)" style="border: none; width: 60%; height: 300px;"></iframe>
+
     </div>
     <h2>Formulaire de contact</h2>
     <form (ngSubmit)="submitForm()">

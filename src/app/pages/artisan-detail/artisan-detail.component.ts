@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../../data.service';
 import { EmailService } from '../../email.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-artisan-detail',
@@ -19,7 +20,8 @@ export class ArtisanDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private dataService: DataService,
-    private emailService: EmailService
+    private emailService: EmailService,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
@@ -49,6 +51,11 @@ export class ArtisanDetailComponent implements OnInit {
     this.contactForm.name = '';
     this.contactForm.subject = '';
     this.contactForm.message = '';
+  }
+  sanitizeMapUrl(latitude: number, longitude: number): SafeResourceUrl {
+    const url = `https://www.openstreetmap.org/export/embed.html?bbox=${longitude - 0.01},${latitude - 0.01},${longitude + 0.01},${latitude + 0.01}&amp;layer=mapnik`;
+    console.log('Generated URL:', url); // Vérifiez l'URL générée
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }
 
