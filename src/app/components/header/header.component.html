@@ -4,38 +4,38 @@
       <a class="navbar-brand" routerLink="/" routerLinkActive="active">
         <img src="assets/Logo.png" alt="Trouve ton artisan" class="logo-img">
       </a>
-          <!-- Champ de recherche -->
-      <div class="search-container mx-auto ">
-          <input type="text" class="form-control" placeholder="Rechercher un artisan" [(ngModel)]="query"
-              (keyup.enter)="onSearchEnter()">
-          <img src="assets/loupe.svg" alt="Loupe" class="search-icon">
+      <!-- Champ de recherche -->
+      <div class="search-container mx-auto">
+        <input type="text" class="form-control" placeholder="Rechercher un artisan" [(ngModel)]="query" (keyup.enter)="onSearchEnter()">
+        <img src="assets/loupe.svg" alt="Loupe" class="search-icon">
       </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        
-          <!-- Liens de navigation -->
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/building-artisans">Bâtiment</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/services-artisans">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/fabrication-artisans">Fabrication</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/food-artisans">Alimentation</a>
-            </li>
-          </ul>
-        
+      <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show': !isCollapsed}" id="navbarSupportedContent">
+        <!-- Liens de navigation -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/building-artisans">Bâtiment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/services-artisans">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/fabrication-artisans">Fabrication</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/food-artisans">Alimentation</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
 </header>
+
+
+
+
 
 
 

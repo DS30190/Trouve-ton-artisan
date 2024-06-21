@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   query: string = ''; // Terme de recherche
+  isCollapsed = true; // État initial du menu burger
 
   constructor(private router: Router) {}
 
@@ -18,7 +19,13 @@ export class HeaderComponent {
       this.router.navigate(['/search-results'], { queryParams: { query: this.query } });
     }
   }
+
+  // Méthode pour gérer le changement d'état du menu burger
+  toggleMenu(): void {
+    this.isCollapsed = !this.isCollapsed;
+  }
 }
+
 
 
 
