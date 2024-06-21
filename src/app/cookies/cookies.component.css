@@ -5,7 +5,7 @@ html, body {
   }
   
   .full-height {
-    min-height: 100vh; /* vh est le pourcentage de la hauteur de la fenêtre du navigateur */
+    min-height: 100vh; 
   }
   h1 {
     color: #00497c;

@@ -1,7 +1,7 @@
 header {  
   width: 100%;
-  position: relative; /* Pour que le dégradé soit positionné correctement */
-  background-color: #ffffff !important; /* Couleur de fond blanche avec !important pour forcer le style */
+  position: relative; 
+  background-color: #ffffff !important; 
  
   
 }
@@ -26,15 +26,15 @@ header a {
   color: #000;
 }
 .logo-img {
-  max-width: 200px; /* Taille maximale en pixels */
-  max-height: 50px; /* Hauteur maximale en pixels */
-  transition: max-width 0.3s, max-height 0.3s; /* Transition douce */
+  max-width: 200px; 
+  max-height: 50px; 
+  transition: max-width 0.3s, max-height 0.3s; 
   margin-right: 20rem;
 }
 
 @media (max-width: 991.98px) {
   .logo-img {
-    max-width: 160px; /* Réduire la taille pour les écrans plus petits */
+    max-width: 160px; 
     max-height: 40px;
     margin-right: 2rem;
   }
@@ -42,8 +42,8 @@ header a {
 }
 
 header img {
-  max-height: 200px; /* Ajustez cette valeur selon vos besoins */
-  height: auto; /* Pour s'assurer que l'image conserve son ratio d'aspect */
+  max-height: 200px; 
+  height: auto; 
 }
 
 header nav a {
@@ -62,29 +62,29 @@ input[type="text"] {
 .search-container {
   display: flex;
   align-items: center;
-  position: relative; /* Pour positionner correctement l'icône de recherche */
+  position: relative; 
   flex-grow: 1;
   margin-right: 5rem;
-  margin-left: 0rem; /* Espace entre la barre de recherche et le menu */
+  margin-left: 0rem; 
   max-width: 15rem;
 }
 
 .search-container input {
-  padding: 10px 40px 10px 10px; /* Ajuster le padding pour faire de la place pour l'icône à droite */
+  padding: 10px 40px 10px 10px; 
   border: 2px solid;
   border-color: white #0074c7 #0074c7 white;
   outline: none;
-  width: 100%; /* Ajuste la largeur pour occuper tout l'espace disponible */
+  width: 100%; 
 }
 
 .search-icon {
   position: absolute;
-  right: 10px; /* Ajuster la position à l'intérieur du champ de saisie */
+  right: 10px; 
   top: 50%;
   transform: translateY(-50%);
-  width: 20px; /* Ajuster la taille de l'icône */
-  height: 20px; /* Ajuster la taille de l'icône */
-  pointer-events: none; /* Rendre l'icône non cliquable */
+  width: 20px; 
+  height: 20px; 
+  pointer-events: none; 
   color: #0074c7;
 }
 

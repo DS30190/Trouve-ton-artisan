@@ -37,7 +37,6 @@
               <p class="detail"><strong>Localisation :</strong> {{ artisan.location }}</p>
               <div id="map">
                 <iframe [src]="sanitizeMapUrl(artisan.coordinates.latitude, artisan.coordinates.longitude)" style="border: none; width: 80%; height: 200px;"></iframe>
-
               </div>
             </div>
           </div>

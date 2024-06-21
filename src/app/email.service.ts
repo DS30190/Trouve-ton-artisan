@@ -6,13 +6,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class EmailService {
 
-  private mailDevUrl = 'http://localhost:1080/email'; // L'URL où MailDev reçoit les e-mails
+  private mailDevUrl = 'http://localhost:1080/email';  
 
   constructor(private http: HttpClient) { }
 
   sendEmail(recipient: string, subject: string, message: string) {
     const body = {
-      from: 'yourapp@example.com', // Adresse e-mail fictive de votre application
+      from: 'yourapp@example.com', 
       to: recipient,
       subject,
       text: message

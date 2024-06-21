@@ -5,7 +5,7 @@
 }
   
   h1 {
-    color: #00497c; /* Couleur bleu foncé pour le titre h1 */
+    color: #00497c; 
   }
   
   h2 {
@@ -14,14 +14,14 @@
     color: #00497c;
   }
   a, p {
-    color: #0074c7; /* Couleur bleu pour les paragraphes */
+    color: #0074c7;
   }
   
   strong {
     color: #384050;
   }
   .fa {
-    color: #cd2c2e; /* Couleur rouge pour les étoiles */
+    color: #cd2c2e; 
   }
   
   iframe {
@@ -32,11 +32,11 @@
   
   
   .narrow-input {
-    width: 25%; /* Largeur personnalisée pour le champ input */
+    width: 25%; 
   }
 
   .narrow2-input {
-    width: 50%; /* Largeur personnalisée pour le champ input */
+    width: 50%; 
   }
 
   button {

@@ -6,19 +6,17 @@
         <a class="nav-link" [routerLink]="['/artisan-detail', artisan.id]"><h5 class="card-title">{{ artisan.name }}</h5></a>
         <p class="card-text">
           <strong>Spécialité:</strong> {{ artisan.specialty }}<br>
-          
           <strong>Note :  </strong>
           <span *ngFor="let starClass of getStarClasses(artisan.note)">
             <i class="fa" [ngClass]="starClass"></i>
           </span><br>
-          
-          
           <strong>Localisation:</strong> {{ artisan.location }}
         </p>
+
         <div id="map">
           <iframe [src]="sanitizeMapUrl(artisan.coordinates.latitude, artisan.coordinates.longitude)" style="border: none; width: 60%; height: 200px;"></iframe>
-
         </div>
+        
       </div>
     </div>
   </div>

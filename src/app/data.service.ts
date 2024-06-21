@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DataService {
-  private jsonUrl = 'assets/datas.json'; // URL vers votre fichier JSON, à adapter si nécessaire
+  private jsonUrl = 'assets/datas.json'; 
 
   constructor(private http: HttpClient) {}
 

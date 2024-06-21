@@ -8,7 +8,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ArtisanService {
-  private jsonUrl = 'assets/datas.json'; // Assurez-vous que le chemin est correct
+  private jsonUrl = 'assets/datas.json'; 
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class ArtisanService {
 
   searchArtisans(query: string): Observable<any[]> {
     if (!query) {
-      return this.getArtisans(); // Si aucune requête n'est entrée, retourner tous les artisans
+      return this.getArtisans(); 
     }
     return this.getArtisans().pipe(
       map(artisans => artisans.filter(artisan =>

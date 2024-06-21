@@ -4,6 +4,7 @@
       <a class="navbar-brand" routerLink="/" routerLinkActive="active">
         <img src="assets/Logo.png" alt="Trouve ton artisan" class="logo-img">
       </a>
+
       <!-- Champ de recherche -->
       <div class="search-container mx-auto">
         <input type="text" class="form-control" placeholder="Rechercher un artisan" [(ngModel)]="query" (keyup.enter)="onSearchEnter()">
@@ -12,8 +13,9 @@
       <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show': !isCollapsed}" id="navbarSupportedContent">
-        <!-- Liens de navigation -->
+        <!-- Liens de nav -->
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" routerLink="/building-artisans">Bâtiment</a>
